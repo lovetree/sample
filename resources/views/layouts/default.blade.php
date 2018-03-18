@@ -105,6 +105,44 @@ footer {
     font-weight: bold;
   }
 }
+aside {
+  section {
+    padding: 10px 0;
+    margin-top: 20px;
+    &:first-child {
+      border: 0;
+      padding-top: 0;
+    }
+    span {
+      display: block;
+      margin-bottom: 3px;
+      line-height: 1;
+    }
+  }
+}
+
+section.user_info {
+  padding-bottom: 10px;
+  margin-top: 20px;
+  text-align: center;
+  .gravatar {
+    float: none;
+    max-width: 70px;
+  }
+  h1 {
+    font-size: 1.4em;
+    letter-spacing: -1px;
+    margin-bottom: 3px;
+    margin-top: 15px;
+  }
+}
+
+.gravatar {
+  float: left;
+  margin-right: 10px;
+  max-width: 50px;
+  border-radius: 50%;
+}
   </style>
   <body>
     <header class="navbar navbar-fixed-top navbar-inverse">
@@ -122,6 +160,7 @@ footer {
     </header>
 @include('layouts._header')
     <div class="container">
+      @include('shared._messages')
       @yield('content')
        @include('layouts._footer')
     </div>    
