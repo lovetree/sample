@@ -143,6 +143,13 @@ section.user_info {
   max-width: 50px;
   border-radius: 50%;
 }
+
+#logout {
+  cursor: default;
+  &:hover {
+    background-color: transparent;
+  }
+}
   </style>
   <body>
     <header class="navbar navbar-fixed-top navbar-inverse">
@@ -163,6 +170,7 @@ section.user_info {
       @include('shared._messages')
       @yield('content')
        @include('layouts._footer')
-    </div>    
+    </div> 
+    <script src="/js/app.js"></script>   
   </body>
 </html>
